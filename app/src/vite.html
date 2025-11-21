@@ -2,8 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-
+    <link rel="stylesheet" href="vite.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,21 +11,21 @@
     />
   </head>
   <body>
-    <header class="header">
-      <h1>house meme collection</h1>
-      <h2>a whole lot of house memes. add your own too!</h2>
-    </header>
-    <div class="filterbtns">
-      <button class="filterbtn filterbtn-all">all memes</button>
-      <button class="filterbtn filterbtn-charactermoment">
-        character moment
-      </button>
-      <button class="filterbtn filterbtn-silly">silly</button>
-      <button class="filterbtn filterbtn-cursed">cursed</button>
-      <button class="filterbtn filterbtn-reaction">reaction</button>
-      <button class="filterbtn filterbtn-ship">ship</button>
+    <div class="header-container">
+      <header class="header">
+        <h1>house meme collection</h1>
+        <h2>a whole lot of house memes. add your own too!</h2>
+      </header>
     </div>
-    <section class="container" id="product-list"></section>
+    <div class="filterbtns">
+      <button class="filterbtn-all">all memes</button>
+      <button class="filterbtn-charactermoment">character moment</button>
+      <button class="filterbtn-silly">silly</button>
+      <button class="filterbtn-cursed">cursed</button>
+      <button class="filterbtn-reaction">reaction</button>
+      <button class="filterbtn-ship">ship</button>
+    </div>
+    <section class="container" id="meme-list"></section>
     <script src="vite.js"></script>
   </body>
 </html>
