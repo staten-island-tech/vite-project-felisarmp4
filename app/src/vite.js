@@ -74,7 +74,7 @@ const memes = [
   },
   {
     name: "foreman happy",
-    img: "photos/12house.jpg",
+    img: "photos/12house.png",
     desc: "buddy nothing can make you THIS happy youre a doctor for gosh sake",
     type: "reaction",
   },

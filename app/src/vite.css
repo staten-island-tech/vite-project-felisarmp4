@@ -1,11 +1,19 @@
 body {
   margin: 0;
   min-height: 100vh;
-  color: #535353;
+  color: #3a3a3a;
   font-size: 14px;
   font-family: "Alexandria", sans-serif;
   font-weight: 500;
   font-style: normal;
+  background: repeating-linear-gradient(
+    90deg,
+    #2e2e2c,
+    #2e2e2c 30px,
+    #4e4e4b 30px,
+    #515c66 30px,
+    #515c66 60px
+  );
 }
 
 .header-container {
@@ -17,9 +25,9 @@ body {
 
 .header {
   border: 5px solid #080808;
-  background-color: #9e9e9e;
+  background-color: #79848f;
   width: fit-content;
-  max-width: none;
+  width: 600px;
   padding: 10px;
   text-align: center;
   box-shadow: 4px 4px 10px #000000b7;
@@ -37,4 +45,62 @@ body {
   justify-content: center;
   margin: auto;
   flex-wrap: wrap;
+}
+
+.display-img {
+  width: 250px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.display-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5a5a5a;
+  border: 5px solid #2c2c2c;
+  width: 260px;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 4px 4px 10px #000000b7;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.learnmore {
+  display: inline-block;
+  background-color: #79848f;
+  padding: 8px 16px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100px;
+  margin-top: 10px;
+  box-shadow: 4px 4px 10px #00000034;
+  padding: 5px;
+  border: 4px solid #2c2c2c;
+  border-radius: 5px;
+}
+
+.display-card:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 15px #000000b7;
+}
+
+@media screen and (max-width: 900px) {
+  .display-card {
+    flex-direction: column;
+    align-items: center;
+    max-height: none;
+  }
+  .header {
+    width: 90%;
+    white-space: normal;
+    word-wrap: break-word;
+  }
 }
