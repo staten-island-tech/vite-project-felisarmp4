@@ -21,7 +21,7 @@ const memes = [
   {
     name: "vicodin juggling",
     img: "photos/4house.jpg",
-    desc: "hes lockned n loaded when it comes to drug abuse",
+    desc: "hes locked n loaded when it comes to drug abuse",
     type: "silly",
   },
   {
