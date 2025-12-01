@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="vite.css" />
+    <link rel="stylesheet" href="src/vite.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,21 +21,20 @@
     
 <div class="creatememe-container">
   <button class="create-meme uploadmeme">upload a meme!</button>
-  <button class="create-meme newmeme">create a meme!</button>
 </div>
     </div>
     
-<form action="" method="get" class="form">
-  <div class="form">
-    <label for="title">enter the tile of your meme:</label>
-    <input type="text" name="tilte" id="title" required />
+<form action="" method="get" class="meme-form">
+  <div>
+    <label for="title">enter the title of your meme:</label>
+    <input type="text" name="title" id="title" required />
   </div>
-  <div class="form">
+  <div>
     <label for="desc">enter the description of your meme:</label>
-    <input type="desc" name="desc" id="desc" required />
+    <input type="text" name="desc" id="desc" required />
   </div>
-  <div class="form">
-    <input type="submit" value="add meme!"/>
+  <div>
+    <input type="submit" value="add meme!" />
   </div>
 </form>
 
@@ -50,6 +49,6 @@
     </div>
     <section class="container" id="meme-list"></section>
 
-    <script src="vite.js"></script>
+    <script src="src/vite.js"></script>
   </body>
 </html>
