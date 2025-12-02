@@ -1,11 +1,11 @@
 const uploadmemebtn = document.querySelector(".uploadmeme");
 const memeform = document.querySelector(".meme-form");
+const container = document.querySelector("#meme-list");
+const filterbtns = document.querySelectorAll(".filterbtn");
 
 uploadmemebtn.addEventListener("click", () => {
   memeform.classList.toggle("show");
 });
-
-const container = document.querySelector("#meme-list");
 
 const memes = [
   {
@@ -199,3 +199,58 @@ document
 document
   .querySelector(".filterbtn-cm")
   .addEventListener("click", () => showmemes("character moment"));
+
+showmemes("all");
+
+uploadmemebtn.addEventListener("click", () => {
+  memeform.classList.add("show");
+  container.style.display = "none";
+});
+
+memeform.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const title = document.querySelector("#title").value;
+  const desc = document.querySelector("#desc").value;
+
+  memes.push({
+    name: title,
+    img: "src/photos/default.jpg",
+    desc: desc,
+    type: "silly",
+  });
+
+  memeform.classList.remove("show");
+  container.style.display = "flex";
+  showmemes("all");
+  memeform.reset();
+});
+
+filterbtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    memeform.classList.remove("show");
+    container.style.display = "flex";
+
+    const typeClass = btn.classList[1];
+
+    switch (typeClass) {
+      case "filterbtn-all":
+        showmemes("all");
+        break;
+      case "filterbtn-cm":
+        showmemes("character moment");
+        break;
+      case "filterbtn-silly":
+        showmemes("silly");
+        break;
+      case "filterbtn-cursed":
+        showmemes("cursed");
+        break;
+      case "filterbtn-reaction":
+        showmemes("reaction");
+        break;
+      case "filterbtn-ship":
+        showmemes("ship");
+        break;
+    }
+  });
+});
