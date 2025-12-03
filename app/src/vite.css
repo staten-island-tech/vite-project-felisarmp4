@@ -71,17 +71,6 @@ body {
 
 .meme-form {
   display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.meme-form.show {
-  display: block;
-  opacity: 1;
-}
-
-.meme-form {
-  display: none;
   flex-direction: column;
   align-items: center;
   background-color: #5a5a5a;
@@ -92,6 +81,51 @@ body {
   box-shadow: 4px 4px 10px #000000b7;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 4px solid #252525;
+  border-radius: 5px;
+}
+
+.meme-form {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.meme-form.show {
+  display: block;
+  opacity: 1;
+}
+
+#img {
+  display: inline-block;
+  background-color: #79848f;
+  padding: 8px 16px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100px;
+  margin-top: 10px;
+  box-shadow: 4px 4px 10px #00000034;
+  padding: 5px;
+  border: 4px solid #252525;
+  border-radius: 5px;
+}
+
+.add-meme {
+  display: inline-block;
+  background-color: #79848f;
+  padding: 8px 16px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100px;
+  margin-top: 10px;
+  box-shadow: 4px 4px 10px #00000034;
+  padding: 5px;
   border: 4px solid #252525;
   border-radius: 5px;
 }

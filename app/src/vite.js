@@ -211,12 +211,17 @@ memeform.addEventListener("submit", (e) => {
   e.preventDefault();
   const title = document.querySelector("#title").value;
   const desc = document.querySelector("#desc").value;
+  const fileinput = document.querySelector("#img");
+  const type = document.querySelector("#type").value;
+
+  const file = fileinput.files[0];
+  const imgurl = URL.createObjectURL(file);
 
   memes.push({
     name: title,
-    img: "src/photos/default.jpg",
+    img: imgurl,
     desc: desc,
-    type: "silly",
+    type: type,
   });
 
   memeform.classList.remove("show");
