@@ -171,7 +171,7 @@ function showmemes(filtertype) {
             <img class="display-img" src="${meme.img}" alt="${meme.name}">
             <h2 class="display-name">${meme.name}</h2>
             <h3 class="display-desc">${meme.desc}</h3>
-            <button class="learnmore">learn more</button>
+            <button class="download">download</button>
           </div>
           `
       );

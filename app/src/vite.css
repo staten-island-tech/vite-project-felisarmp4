@@ -1,12 +1,5 @@
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: #202020;
-  font-size: 14px;
-  font-family: "Alexandria", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  background: repeating-linear-gradient(
+:root {
+  --bg: repeating-linear-gradient(
     90deg,
     #2e2e2c,
     #2e2e2c 30px,
@@ -14,6 +7,31 @@ body {
     #515c66 30px,
     #515c66 60px
   );
+  --text: #202020;
+  --cardbg: #5a5a5a;
+}
+
+.light {
+  --bg: repeating-linear-gradient(
+    90deg,
+    #aaaaaa,
+    #aaaaaa 30px,
+    #4e4e4b 30px,
+    #515c66 30px,
+    #515c66 60px
+  );
+  --cardbg: #bebebe;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-size: 14px;
+  font-family: "Alexandria", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background: var(--bg);
 }
 
 .header-container {
@@ -132,7 +150,7 @@ input:checked + .slider:before {
   display: none;
   flex-direction: column;
   align-items: center;
-  background-color: #5a5a5a;
+  background-color: var(--cardbg);
   width: 260px;
   padding: 10px;
   margin: 20px auto;
@@ -194,7 +212,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #5a5a5a;
+  background-color: var(--cardbg);
   width: 260px;
   padding: 10px;
   margin: 20px;
@@ -240,7 +258,7 @@ input:checked + .slider:before {
   transform: scale(1.05);
 }
 
-.learnmore {
+.download {
   display: inline-block;
   background-color: #79848f;
   padding: 8px 16px;
@@ -257,7 +275,7 @@ input:checked + .slider:before {
   border-radius: 5px;
 }
 
-.learnmore:hover {
+.download:hover {
   transform: scale(1.05);
 }
 
