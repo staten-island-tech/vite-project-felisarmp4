@@ -171,13 +171,27 @@ function showmemes(filtertype) {
             <img class="display-img" src="${meme.img}" alt="${meme.name}">
             <h2 class="display-name">${meme.name}</h2>
             <h3 class="display-desc">${meme.desc}</h3>
-            <button class="download">download</button>
+            <button class="download" data-img="${meme.img}" data-name="${meme.name}">download</button>
           </div>
           `
       );
     }
   });
 }
+
+container.addEventListener("click", (e) => {
+  if (e.target.classList.contains("download")) {
+    const url = e.target.dataset.img;
+    const name = e.target.dataset.name;
+
+    const filename = name.replace(/\s+/g, "_").toLowerCase() + ".png";
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    a.click();
+  }
+});
 
 showmemes("all");
 
