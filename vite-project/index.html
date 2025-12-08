@@ -1,13 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-project</title>
+    <title>meme generator</title>
+    <link rel="stylesheet" href="/vite.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="header-container">
+      <header class="header">
+        <h1>house meme collection</h1>
+        <h2>a whole lot of house memes. add your own too!</h2>
+      </header>
+    </div>
+
+    <div class="creatememe-container">
+      <button class="create-meme uploadmeme">upload a meme!</button>
+
+      <label class="switch">
+        <input type="checkbox" id="modeswitch" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <form action="" method="get" class="meme-form" id="meme-form">
+      <div>
+        <label for="title">enter the title of your meme:</label>
+        <input type="text" name="title" id="title" required />
+      </div>
+      <div>
+        <label for="desc">enter the description of your meme:</label>
+        <input type="text" name="desc" id="desc" required />
+      </div>
+      <div>
+        <label for="img">upload your image:</label>
+        <input type="file" name="img" id="img" required />
+      </div>
+      <div>
+        <label for="type">choose a category:</label>
+        <select id="type" name="type" required>
+          <option value="silly">silly</option>
+          <option value="cursed">cursed</option>
+          <option value="reaction">reaction</option>
+          <option value="ship">ship</option>
+          <option value="character moment">character moment</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" value="add meme!" class="add-meme" />
+      </div>
+    </form>
+
+    <div class="filterbtn-container">
+      <button class="filterbtn filterbtn-all">all memes</button>
+      <button class="filterbtn filterbtn-cm">character moment</button>
+      <button class="filterbtn filterbtn-silly">silly</button>
+      <button class="filterbtn filterbtn-cursed">cursed</button>
+      <button class="filterbtn filterbtn-reaction">reaction</button>
+      <button class="filterbtn filterbtn-ship">ship</button>
+    </div>
+
+    <section class="container" id="meme-list"></section>
+
+    <link rel="stylesheet" href="/src/vite.css" />
+    <script type="module" src="/src/vite.js"></script>
   </body>
 </html>
