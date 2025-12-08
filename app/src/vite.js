@@ -259,3 +259,9 @@ filterbtns.forEach((btn) => {
     }
   });
 });
+
+const modeswitch = document.querySelector("#modeswitch");
+
+modeswitch.addEventListener("change", () => {
+  document.body.classList.toggle("light", modeswitch.checked);
+});

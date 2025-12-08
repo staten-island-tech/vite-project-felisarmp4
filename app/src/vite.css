@@ -9,18 +9,20 @@
   );
   --text: #202020;
   --cardbg: #5a5a5a;
+  --button: #79848f;
 }
 
 .light {
   --bg: repeating-linear-gradient(
     90deg,
-    #aaaaaa,
-    #aaaaaa 30px,
+    #dfdfdf,
+    #dfdfdf 30px,
     #4e4e4b 30px,
-    #515c66 30px,
-    #515c66 60px
+    #65707a 30px,
+    #65707a 60px
   );
-  --cardbg: #bebebe;
+  --cardbg: #cecece;
+  --button: #f0f0f0;
 }
 
 body {
@@ -42,7 +44,7 @@ body {
 }
 
 .header {
-  background-color: #79848f;
+  background-color: var(--button);
   width: fit-content;
   width: 600px;
   padding: 10px;
@@ -126,7 +128,7 @@ input:checked + .slider:before {
 
 .create-meme {
   display: inline-block;
-  background-color: #79848f;
+  background-color: var(--button);
   padding: 8px 16px;
   border: none;
   font-weight: bold;
@@ -180,7 +182,7 @@ input:checked + .slider:before {
 
 .add-meme {
   display: inline-block;
-  background-color: #79848f;
+  background-color: var(--button);
   padding: 8px 16px;
   border: none;
   font-weight: bold;
@@ -239,7 +241,7 @@ input:checked + .slider:before {
 
 .filterbtn {
   display: inline-block;
-  background-color: #79848f;
+  background-color: var(--button);
   padding: 8px 16px;
   border: none;
   font-weight: bold;
@@ -260,7 +262,7 @@ input:checked + .slider:before {
 
 .download {
   display: inline-block;
-  background-color: #79848f;
+  background-color: var(--button);
   padding: 8px 16px;
   border: none;
   font-weight: bold;
