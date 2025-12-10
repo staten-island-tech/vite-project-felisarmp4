@@ -1,3 +1,4 @@
+import "./vite.css";
 const uploadmemebtn = document.querySelector(".uploadmeme");
 const memeform = document.querySelector(".meme-form");
 const container = document.querySelector("#meme-list");
